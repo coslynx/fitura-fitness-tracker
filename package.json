@@ -1,0 +1,35 @@
+{
+  "name": "fitness-goal-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"cd apps/client && npm start\" \"cd apps/server && npm start\"",
+    "dev": "concurrently \"cd apps/client && npm run dev\" \"cd apps/server && npm run dev\"",
+    "build": "concurrently \"cd apps/client && npm run build\" \"cd apps/server && npm run build\"",
+    "lint": "eslint \"apps/**/*.{js,jsx,ts,tsx}\" \"packages/**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\""
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "@mui/material": "^6.2.0",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "concurrently": "^8.2.1",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
